@@ -66,4 +66,8 @@ class EventController extends Controller
                 return Redirect::to('/all-event');
 
     }
+    public function all_calender()
+    {
+      return view('admin.dashboard');
+    }
 }
