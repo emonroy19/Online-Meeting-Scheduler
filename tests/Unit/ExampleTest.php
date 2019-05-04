@@ -1,10 +1,9 @@
+
 <?php
-
 namespace Tests\Unit;
-
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-
+use App\Event;
 class ExampleTest extends TestCase
 {
     /**
@@ -14,6 +13,12 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $this->assertTrue(true);
+       $response = $this->get('/save-user');
+
+        $response->assertStatus(405);
+    }
+    public function testExample()
+    {
+        $this->assertFalse(false);
     }
 }
